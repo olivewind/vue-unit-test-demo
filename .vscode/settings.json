@@ -1,0 +1,3 @@
+{
+  "jest.pathToConfig": "./test/unit/jest.conf.js"
+}
