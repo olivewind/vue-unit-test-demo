@@ -1,13 +1,28 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-view/>
+    <hello-world></hello-world>
+    <rx-demo></rx-demo>
   </div>
 </template>
 
 <script>
+import HelloWorld from './components/hello-world/hello-world';
+import RxDemo from './components/rx-demo/rx-demo';
+
 export default {
   name: 'App',
+  provide() {
+    return {
+      GLOBAL: {
+        logined: true,
+      },
+    };
+  },
+  components: {
+    HelloWorld,
+    RxDemo,
+  },
 };
 </script>
 
